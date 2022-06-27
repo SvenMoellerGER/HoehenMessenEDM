@@ -1,0 +1,37 @@
+"""
++++++ Algorithmus +++++
+
++++ Vor dem Wettkampf:
+Ständer in Nullstellung
+Messen Entfernung Tachy Nullinie (Prisma auf Nulllinie, Art des Prismas in Tachy eingeben)
+Speichern Horizontalstrecke und Höhe zwischen Nulllinie und Tachy
+Latte auf Höhe 2,00m
+Messen Ausleger links und rechts über Reflexfolie (Abstand, Höhe?)
+Speichern: i (Höhe Nulllinie Tachy)
+Latte auf Höhe 4,00m (Kontrolle Ständer im Lot; evtl Interpolation und Korrektur offset)
+Messen Ausleger links und rechts über Reflexfolie (Abstand, Höhe?)
+
++++ Im Wettkampf
+Latte auf ungefähre Höhe einstellen
+Latte mit Tachy anzielen
+REC am Tachy
+Auslesen: v (Vertikalwinkel)
+w = 100 gon - v (Winkel bei Bedarf ändern, Bogenmaß)
+x = tan(w) * s
+
+geg.: d = 0,03 m --> r = 0,015 m
+gamma = 2v
+alpha = 200 gon - gamma
+a = alpha/2
+t = r * tan(a)
+h = r * (1 - cos(a))
+c = r * tan(a) * tan(alpha/4)
+
+Proben:
+t = (c + r) * sin(a)
+r = h + r * cos(a)
+Proben checken
+
+Höhe = i + x - c
+"""
+
